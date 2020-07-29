@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "testing-40b8"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "testing-40b8"
+    spec:
+      containers:
+        - name: "testing-40b8"
+          image: "testing2.azurecr.io/testing"
+          ports:
+          - containerPort: 8080
